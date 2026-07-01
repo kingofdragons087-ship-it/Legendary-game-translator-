@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مترجم الألعاب الأسطوري</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شعار المقدمة -->
+    <div id="intro">
+        <h1>GAME</h1>
+        <p>✦ LOCALIZATION TOOL ✦</p>
+    </div>
+
+    <!-- التطبيق -->
+    <div class="container">
+        <h2>🚀 مترجم الألعاب الأسطوري</h2>
+        <p class="sub">ترجمة + تدقيق فوري | يدعم XML, JSON, TXT, BAT</p>
+
+        <div class="modes">
+            <label><input type="radio" name="mode" value="groq" checked> ⚡ Groq (سريعة)</label>
+            <label><input type="radio" name="mode" value="hybrid"> 🌟 هجين (Groq + Cohere) - جودة أسطورية</label>
+        </div>
+
+        <div class="hybrid-info">
+            💡 <strong>ملاحظة:</strong> الوضع الهجين يترجم عبر <strong>Groq</strong> (للأكواد)، ثم يدقق لغوياً عبر <strong>Cohere</strong> (للجودة). له حدود يومية.
+        </div>
+
+        <textarea id="manualText" rows="4" placeholder="الصق النص أو الكود هنا..."></textarea>
+        <div class="file-wrap">
+            <input type="file" id="fileInput" style="width:100%; background:transparent; border:none; color:#fff;">
+            <p class="file-hint">📁 يدعم: .xml, .json, .txt, .bat, .csv, .html, .js, .css</p>
+        </div>
+
+        <div class="tools">
+            <button onclick="copyText()">📋 نسخ</button>
+            <button onclick="clearText()">🗑️ مسح</button>
+            <button onclick="reverseText()">🔄 عكس</button>
+        </div>
+
+        <button class="btn-main" onclick="translateContent()">🚀 ابدأ الترجمة</button>
+        <div id="note"></div>
+
+        <div class="out-box" id="outBox">
+            <h3>✅ الترجمة جاهزة</h3>
+            <textarea id="translatedText" rows="4" readonly></textarea>
+            <button class="btn-down" onclick="downloadTranslated()">📥 تحميل الملف المترجم</button>
+        </div>
+
+        <div class="thx">
+            <h4>🌟 شكر وتقدير للمعربين 🌟</h4>
+            <p>
+                كل الشكر لكل من يساهم في تعريب الألعاب والبرامج، ويبذل جهداً لنشر المحتوى العربي.
+                <br><br>
+                <strong>شكر خاص لـ:</strong><br>
+                • فرق التعريب في المنتديات العربية.<br>
+                • جميع المبرمجين والمطورين العرب.<br>
+                • كل من يثري المحتوى التقني باللغة العربية.
+                <br><br>
+                🫡 أنتم الأبطال!
+            </p>
+        </div>
+
+        <!-- ===== قسم المطورين مع أيقونات حقيقية ===== -->
+        <div class="dev">
+            <h4>👑 المطورون</h4>
+            <p><strong>King-of-Dragons</strong> / <strong>العيال TGB</strong></p>
+            
+            <div class="dev-links">
+                <!-- PayPal -->
+                <a href="https://paypal.me/SalimSadooni?locale.x=ar_EG&country.x=OM" target="_blank" class="paypal-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.076 21.337l.732-4.634h2.625c4.766 0 6.64-2.31 7.166-5.338.527-3.028-1.114-5.005-4.77-5.005H7.7L5.404 21.337h1.672zm-.8-9.46h3.516c2.322 0 3.38 1.018 3.072 3.242-.292 2.196-1.786 3.62-4.244 3.62H7.64l.66-4.82h.482z"/>
+                    </svg>
+                    PayPal
+                </a>
+
+                <!-- YouTube (اشترك) -->
+                <a href="https://www.youtube.com/@TGB2022" target="_blank" class="youtube-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    اشترك في القناة
+                </a>
+            </div>
+        </div>
+        <!-- ========================================== -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

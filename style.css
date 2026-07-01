@@ -1,0 +1,129 @@
+/* شعار البداية */
+#intro {
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: #0a0000;
+    display: flex; justify-content: center; align-items: center;
+    flex-direction: column;
+    z-index: 99999;
+    transition: opacity 0.8s ease;
+}
+#intro.hide { opacity: 0; pointer-events: none; }
+#intro h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 80px; color: #ff1111;
+    letter-spacing: 15px;
+    text-shadow: 0 0 50px #ff0000, 0 0 100px #880000;
+    animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    100% { transform: scale(1.05); opacity: 1; }
+}
+#intro p { color: #888; font-size: 18px; letter-spacing: 8px; margin-top: 10px; }
+
+/* واجهة التطبيق */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #0b0e17;
+    min-height: 100vh; padding: 20px;
+    display: flex; justify-content: center;
+}
+.container {
+    background: #141a2b; padding: 25px 20px;
+    border-radius: 25px; max-width: 900px; width: 100%;
+    border: 1px solid #283050;
+}
+h2 { text-align: center; color: #fff; font-size: 24px; margin-bottom: 8px; }
+.sub { text-align: center; color: #8892b0; margin-bottom: 20px; font-size: 14px; }
+
+.modes { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.modes label {
+    background: #1f2640; padding: 10px 20px; border-radius: 30px;
+    border: 1px solid #374568; color: #b0bcdb; cursor: pointer;
+    font-weight: bold; font-size: 14px; transition: 0.2s;
+}
+.modes label:has(input:checked) {
+    border-color: #4da8ff; background: #1a2d55; color: #fff;
+}
+.modes input { display: none; }
+
+.hybrid-info {
+    background: #1a1a2e; padding: 12px; border-radius: 12px;
+    border: 1px solid #4da8ff; color: #c0d0e8;
+    font-size: 14px; margin-bottom: 20px; text-align: center;
+}
+
+textarea, .file-wrap {
+    width: 100%; padding: 15px; background: #090d18;
+    border: 1px solid #2a3355; border-radius: 15px;
+    color: #fff; font-size: 15px; margin-bottom: 15px;
+}
+textarea:focus { border-color: #4da8ff; outline: none; }
+.file-hint { color: #64748b; font-size: 13px; margin-top: 5px; text-align: center; }
+
+.tools { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.tools button {
+    flex: 1; padding: 10px; background: #1f2640;
+    border: 1px solid #374568; border-radius: 12px;
+    color: #b0bcdb; cursor: pointer; font-size: 14px; transition: 0.2s;
+}
+.tools button:hover { background: #2a3150; }
+
+.btn-main {
+    width: 100%; padding: 16px;
+    background: linear-gradient(135deg, #4da8ff, #8b5cf6);
+    color: #fff; border: none; border-radius: 15px;
+    font-weight: bold; font-size: 18px; cursor: pointer;
+}
+
+#note {
+    display: none; padding: 12px; margin: 15px 0; border-radius: 12px; text-align: center; color: #fff;
+}
+#note.success { background: #0b4530; border: 1px solid #10b981; }
+#note.error { background: #451a1a; border: 1px solid #ef4444; }
+#note.loading { background: #1a2a5a; border: 1px solid #3b82f6; }
+#note.info { background: #1f2640; border: 1px solid #64748b; }
+
+.out-box {
+    margin-top: 20px; padding: 20px; background: #090d18;
+    border-radius: 15px; border: 1px solid #2a3355; display: none;
+}
+.out-box h3 { color: #6ee7b7; }
+.out-box textarea {
+    width: 100%; background: #090d18; border: none; color: #fff;
+    padding: 10px; border-radius: 10px; resize: vertical;
+}
+.btn-down {
+    width: 100%; padding: 12px; background: #10b981;
+    color: #fff; border: none; border-radius: 12px; margin-top: 10px; cursor: pointer;
+}
+
+.thx, .dev {
+    margin-top: 20px; padding: 15px; background: #090d18;
+    border-radius: 15px; border: 1px solid #2a3355; text-align: center; color: #8892b0;
+}
+.thx h4 { color: #facc15; font-size: 20px; }
+.thx p { line-height: 1.6; }
+
+/* ===== تنسيق أزرار المطورين الجديدة ===== */
+.dev h4 { color: #4da8ff; }
+.dev-links {
+    display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;
+}
+.dev-links a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 20px; border-radius: 30px; text-decoration: none;
+    font-weight: bold; font-size: 14px; transition: 0.3s;
+}
+.paypal-btn {
+    background: #003087; color: #fff;
+}
+.paypal-btn:hover { background: #004bb3; transform: scale(1.05); }
+
+.youtube-btn {
+    background: #ff0000; color: #fff;
+}
+.youtube-btn:hover { background: #cc0000; transform: scale(1.05); }
+
+.dev-links a svg { fill: currentColor; }
