@@ -1,14 +1,10 @@
-// إخفاء الشعار بعد 2.5 ثانية
+ // إخفاء الشعار بعد 2.5 ثانية
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         document.getElementById('intro').classList.add('hide');
     }, 2500);
 });
 
-// المفاتيح
-const GROQ_KEY = "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";
-const COHERE_KEY = "NmyW6fgEBAVBOr1iktbFSTn1TBAAOTd3Amp2Nwmc";
-let fileName = '';
 
 function note(msg, type) {
     const el = document.getElementById('note');
