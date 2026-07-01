@@ -1,17 +1,26 @@
 {
-"name":"legendary-game-translator",
-"version":"1.0.0",
-"main":"main.js",
+  "name": "legendary-game-translator",
+  "version": "1.0.0",
+  "description": "مترجم العاب اسطوري",
+  "author": "Legendary Game Translator",
+  "main": "main.js",
 
-"scripts":{
-"start":"electron .",
-"build":"electron-builder"
-},
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
 
-"devDependencies":{
+  "build": {
+    "appId": "com.legendary.gametranslator",
+    "productName": "مترجم العاب اسطوري",
+    "publish": "never",
+    "win": {
+      "target": "nsis"
+    }
+  },
 
-"electron":"latest",
-"electron-builder":"latest"
-
-}
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  }
 }
