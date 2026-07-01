@@ -7,13 +7,12 @@
 
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder --publish never"
   },
 
   "build": {
     "appId": "com.legendary.gametranslator",
     "productName": "مترجم العاب اسطوري",
-    "publish": "never",
     "win": {
       "target": "nsis"
     }
